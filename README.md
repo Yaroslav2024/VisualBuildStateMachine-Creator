@@ -16,13 +16,3 @@ The application supports instant generation of optimized code for the following 
 * **Python**
 * **Java**
 
-## 🚀 How to Run (No installation required)
-1. Go to the [Releases](../../releases) tab.
-2. Download the latest `.zip` release file.
-3. Extract the archive to any folder.
-4. Run `VisualBuildStateMachine Creator.exe`.
-
-## 📁 Project Structure & Tech Stack
-* Developed using **C++** and the **Qt 6 Framework**.
-* The application uses the **MVC (Model-View-Controller)** architecture.
-* Graphs are saved and loaded using a lightweight **JSON** schema.
