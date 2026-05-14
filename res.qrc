@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>StateMachineicon.png</file>
+    </qresource>
+</RCC>
