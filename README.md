@@ -16,4 +16,5 @@ The application supports instant generation of optimized code for the following 
 * **C++ Desktop**
 * **Python**
 * **Java**
-
+  
+License & Usage Rights VisualBuildStateMachine Creator is open-source software distributed under the GNU GPL v3.0 license. Please note the following key licensing specifics: Generated Code Ownership: The generated source code belongs entirely to you (the user). It is not subject to the GPL restrictions of the IDE. You are free to use your generated code in any private, commercial, or closed-source projects. Scope of License: The GNU GPL v3.0 license applies strictly to the IDE software itself. Provided "As Is": This software is provided "as is", without warranty of any kind. Forking and Modifications: You are free to use, modify, fork, and distribute the IDE software. No Closed-Source Commercialization: You may not close the source code of the IDE. Any modified versions or forks of this program must also be open-sourced and distributed under the same GPLv3 license terms.
