@@ -16,8 +16,37 @@ The application supports instant generation of optimized code for the following 
 * **C++ Desktop**
 * **Python**
 * **Java**
-  
-### ⚖️ License & Usage Rights
+
+## 🔥 Core Features
+
+### 1. Embedded-First Architecture (No RTOS Required)
+VisualBuild is designed with strict embedded constraints in mind:
+* **Zero Dynamic Allocation:** The generated FSM relies strictly on static memory. No `malloc` or `new` during runtime, completely eliminating heap fragmentation and Memory Leaks.
+* **Mathematical Parallelism:** Running multiple concurrent states? The compiler intelligently switches from scalar routing to vector routing, allowing true logical parallelism on single-core microcontrollers *without* the overhead of an RTOS. 
+* **Safe Self-Loops:** Implements a localized `transition_taken` flag to handle "self-to-self" transitions flawlessly, which is critical for non-blocking timers and sensor polling.
+
+### 2. Live Hardware & PC Debugging
+Don't just write code—watch it execute in real-time.
+* **Hardware Debugger:** Inject lightweight telemetry (`[B:id]`, `[T:id]`) directly into your microcontroller via USB (Serial) or over-the-air via Wi-Fi (TCP/IP). Watch the active nodes light up green/red on the canvas.
+* **PC Emulator:** Run your generated logic locally within the IDE's virtual machine. No external hardware required.
+
+*(GIF animation showing the debugger execution will be added later)*
+
+### 3. Smart Canvas & Routing
+* **Orthogonal Auto-Routing:** The "Smart Anchors" mathematically calculate optimal midpoints to prevent arrow overlapping. 
+* **Pre-flight Linter:** Built-in Abstract Syntax Tree (AST) scanning and compiler integration (`g++ -fsyntax-only`) to catch dead ends, syntax mixing, or division by zero *before* compilation.
+
+### 4. Remote Library Ecosystem
+Extend your capabilities dynamically. The built-in Network Manager allows you to fetch and install `.json` FSM modules from an online catalog directly into your workspace.
+
+## 🚀 Quick Start
+
+1. **Configure Toolchains:** Go to `Project Settings` -> `Toolchains & Compilers` and link your system's executable (`g++`, `python`, or `javac`).
+2. **Draw Logic:** Add States, define `OnEnter`/`OnExit` routines, and connect them with conditional Transitions.
+3. **Generate:** Click `Generate SCXML` and select your target language. The IDE will perform "Variable Hoisting" to resolve scopes and output clean code.
+4. **Debug:** Hit the `Debug` button to trace your logic visually.
+
+## ⚖️ License & Usage Rights
 VisualBuildStateMachine Creator is open-source software distributed under the GNU GPL v3.0 license. Please note the following key licensing specifics:
 
 * **Generated Code Ownership:** The generated source code belongs entirely to you (the user). It is not subject to the GPL restrictions of the IDE. You are free to use your generated code in any private, commercial, or closed-source projects.
