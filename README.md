@@ -33,6 +33,10 @@ Don't just write code—watch it execute in real-time.
 <img width="1280" height="720" alt="Untitled" src="https://github.com/user-attachments/assets/a0a14ac2-30f8-4039-8e0f-bee03403e9fc" />
 An example of a PC emulator running
 
+## 📖 Documentation & Guides
+* [usb_debugging_guide.md](https://github.com/user-attachments/files/28191282/usb_debugging_guide.md)
+* [wifi_debugging_guide.md](https://github.com/user-attachments/files/28191284/wifi_debugging_guide.md)
+
 ### 3. Smart Canvas & Routing
 * **Orthogonal Auto-Routing:** The "Smart Anchors" mathematically calculate optimal midpoints to prevent arrow overlapping. 
 * **Pre-flight Linter:** Built-in Abstract Syntax Tree (AST) scanning and compiler integration (`g++ -fsyntax-only`) to catch dead ends, syntax mixing, or division by zero *before* compilation.
