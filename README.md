@@ -34,7 +34,9 @@ Don't just write code—watch it execute in real-time.
 An example of a PC emulator running
 
 ## 📖 Documentation & Guides
+
 [usb_debugging_guide.md](https://github.com/user-attachments/files/28191282/usb_debugging_guide.md)
+
 [wifi_debugging_guide.md](https://github.com/user-attachments/files/28191284/wifi_debugging_guide.md)
 
 ### 3. Smart Canvas & Routing
