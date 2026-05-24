@@ -23,7 +23,7 @@ The application supports instant generation of optimized code for the following 
 VisualBuild is designed with strict embedded constraints in mind:
  **Zero Dynamic Allocation:** The generated FSM relies strictly on static memory. No `malloc` or `new` during runtime, completely eliminating heap fragmentation and Memory Leaks.
  **Mathematical Parallelism:** Running multiple concurrent states? The compiler intelligently switches from scalar routing to vector routing, allowing true logical parallelism on single-core microcontrollers *without* the overhead of an RTOS. 
-* **Safe Self-Loops:** Implements a localized `transition_taken` flag to handle "self-to-self" transitions flawlessly, which is critical for non-blocking timers and sensor polling.
+ **Safe Self-Loops:** Implements a localized `transition_taken` flag to handle "self-to-self" transitions flawlessly, which is critical for non-blocking timers and sensor polling.
 
 ### 2. Live Hardware & PC Debugging
 Don't just write code—watch it execute in real-time.
