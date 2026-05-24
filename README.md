@@ -5,10 +5,13 @@
 ![Qt](https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
+
 **VisualBuildStateMachine Creator** — is a native desktop application designed for visual modeling of Finite State Machines (FSM) and automatic source code generation.
+
 
 ⚠️ **System Requirements:**
  **OS:** Windows 64-bit (Windows 32-bit is strictly NOT supported).
+
 
 ## ✨ Available Code Generation Targets
 The application supports instant generation of optimized code for the following platforms and languages:
@@ -17,7 +20,9 @@ The application supports instant generation of optimized code for the following 
  **Python**
  **Java**
 
+
 ## 🔥 Core Features
+
 
 ### 1. Embedded-First Architecture (No RTOS Required)
 VisualBuild is designed with strict embedded constraints in mind:
@@ -33,6 +38,7 @@ Don't just write code—watch it execute in real-time.
 <img width="1280" height="720" alt="Untitled" src="https://github.com/user-attachments/assets/a0a14ac2-30f8-4039-8e0f-bee03403e9fc" />
 An example of a PC emulator running
 
+
 ## 📖 Documentation & Guides
 
 [usb_debugging_guide.md](https://github.com/user-attachments/files/28191282/usb_debugging_guide.md)
@@ -46,12 +52,14 @@ An example of a PC emulator running
 ### 4. Remote Library Ecosystem
 Extend your capabilities dynamically. The built-in Network Manager allows you to fetch and install `.json` FSM modules from an online catalog directly into your workspace.
 
+
 ## 🚀 Quick Start
 
 1. **Configure Toolchains:** Go to `Project Settings` -> `Toolchains & Compilers` and link your system's executable (`g++`, `python`, or `javac`).
 2. **Draw Logic:** Add States, define `OnEnter`/`OnExit` routines, and connect them with conditional Transitions.
 3. **Generate:** Click `Generate SCXML` and select your target language. The IDE will perform "Variable Hoisting" to resolve scopes and output clean code.
 4. **Debug:** Hit the `Debug` button to trace your logic visually.
+
 
 ## ⚖️ License & Usage Rights
 VisualBuildStateMachine Creator is open-source software distributed under the GNU GPL v3.0 license. Please note the following key licensing specifics:
