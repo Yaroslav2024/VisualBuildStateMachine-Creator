@@ -30,7 +30,8 @@ Don't just write code—watch it execute in real-time.
 * **Hardware Debugger:** Inject lightweight telemetry (`[B:id]`, `[T:id]`) directly into your microcontroller via USB (Serial) or over-the-air via Wi-Fi (TCP/IP). Watch the active nodes light up green/red on the canvas.
 * **PC Emulator:** Run your generated logic locally within the IDE's virtual machine. No external hardware required.
 
-*(GIF animation showing the debugger execution will be added later)*
+<img width="1280" height="720" alt="Untitled" src="https://github.com/user-attachments/assets/a0a14ac2-30f8-4039-8e0f-bee03403e9fc" />
+An example of a PC emulator running
 
 ### 3. Smart Canvas & Routing
 * **Orthogonal Auto-Routing:** The "Smart Anchors" mathematically calculate optimal midpoints to prevent arrow overlapping. 
