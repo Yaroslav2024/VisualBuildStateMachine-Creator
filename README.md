@@ -20,6 +20,8 @@ The application supports instant generation of optimized code for the following 
  **Python**
  **Java**
 
+<img width="1280" height="720" alt="демонстрація-сгенероаного-коду" src="https://github.com/user-attachments/assets/73d1675a-ed05-42e2-8464-0901407e2388" />
+
 
 ## 🔥 Core Features
 
