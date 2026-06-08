@@ -34,7 +34,7 @@ VisualBuild is designed with strict embedded constraints in mind:
 
 ### 2. Live Hardware & PC Debugging
 Don't just write code—watch it execute in real-time.
-  **Hardware Debugger:** Inject lightweight telemetry (`[B:id]`, `[T:id]`) directly into your microcontroller via USB (Serial) or over-the-air via Wi-Fi (TCP/IP). Watch the active nodes light up green/red on the canvas.
+  **Hardware Debugger:** Inject lightweight telemetry (`[B:id]`, `[T:id]`) directly into your microcontroller via USB (Serial) or over-the-air via Wi-Fi (TCP/IP). Watch the active nodes light up green on the canvas.
   **PC Emulator:** Run your generated logic locally within the IDE's virtual machine. No external hardware required.
 
 <img width="1280" height="720" alt="Untitled" src="https://github.com/user-attachments/assets/a0a14ac2-30f8-4039-8e0f-bee03403e9fc" />
