@@ -40,7 +40,7 @@ Don't just write code—watch it execute in real-time.
 <img width="1280" height="720" alt="Untitled" src="https://github.com/user-attachments/assets/a0a14ac2-30f8-4039-8e0f-bee03403e9fc" />
 An example of a PC emulator running...
 
-<img width="1280" height="720" alt="pc-usb-telemetry-gif-2" src="https://github.com/user-attachments/assets/81eb0fa9-088c-42a3-bed1-bfb208a72e83" />
+<img width="1280" height="720" alt="pc-usb-telemetry-gif-2 (1)" src="https://github.com/user-attachments/assets/bf07fc5c-db62-45e7-9f39-0062868a55b2" />
 An example of demonstrating the operation of USB telemetry...
 
 ## 📖 Documentation & Guides
