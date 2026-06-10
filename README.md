@@ -1,4 +1,4 @@
-# ⚙️ VisualBuildStateMachine Creator
+<img width="1280" height="720" alt="pc-usb-telemetry-gif-2" src="https://github.com/user-attachments/assets/7aed80fe-1b8a-4421-b027-698a06cbd276" /># ⚙️ VisualBuildStateMachine Creator
 <img width="2048" height="2064" alt="VisualBuildStateMachine Creator icon" src="https://github.com/user-attachments/assets/39e0b768-1548-4bae-a87f-7a51290f32eb" />
 
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
@@ -38,8 +38,10 @@ Don't just write code—watch it execute in real-time.
   **PC Emulator:** Run your generated logic locally within the IDE's virtual machine. No external hardware required.
 
 <img width="1280" height="720" alt="Untitled" src="https://github.com/user-attachments/assets/a0a14ac2-30f8-4039-8e0f-bee03403e9fc" />
-An example of a PC emulator running
+An example of a PC emulator running...
 
+<img width="1280" height="720" alt="pc-usb-telemetry-gif-2" src="https://github.com/user-attachments/assets/81eb0fa9-088c-42a3-bed1-bfb208a72e83" />
+An example of demonstrating the operation of USB telemetry...
 
 ## 📖 Documentation & Guides
 
