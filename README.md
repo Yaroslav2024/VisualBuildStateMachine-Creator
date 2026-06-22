@@ -64,6 +64,56 @@ Extend your capabilities dynamically. The built-in Network Manager allows you to
 3. **Generate:** Click `Generate SCXML` and select your target language. The IDE will perform "Variable Hoisting" to resolve scopes and output clean code.
 4. **Debug:** Hit the `Debug` button to trace your logic visually.
 
+## 🧮 Core Architecture & Mathematical Model
+
+This document outlines the fundamental mathematical models and graph theory algorithms underlying the **VisualBuildStateMachine** engine. The core's primary goal is to translate visual Statecharts into strictly deterministic, platform-independent C++ code **without** relying on a Real-Time Operating System (RTOS).
+
+### 1. Flat Automaton Model & $O(1)$ Dispatch (Single FSM)
+A classical Deterministic Finite Automaton (DFA) is defined by the 5-tuple:
+$$M = \langle S, \Sigma, \delta, s_0, F \rangle$$
+
+* **The Problem:** In classical switch-case implementations, computing the next state $\delta(s_i, \sigma)$ takes $O(|S|)$ time due to sequential condition evaluations.
+* **Our Solution:** The engine transforms the set of visual states $S$ into an injective mapping of memory pointers $P$: $f: S \to P$. 
+By dereferencing function pointers directly, the computational complexity of any state transition becomes strictly constant: **$T(\delta) = O(1)$**. This guarantees absolute hardware determinism regardless of graph size.
+
+### 2. Deterministic Parallelism (Orthogonal Regions)
+* **The Problem:** Running multiple state machines with $|S_1|$ and $|S_2|$ states causes a combinatorial explosion ($|S_1| \times |S_2|$ states).
+* **Our Solution:** We implement tokenized concurrency without an RTOS. Let $n$ be the number of active processes. The global system state at time $t$ is described by a vector:
+$$\vec{A}(t) = [a_1(t), a_2(t), \dots, a_n(t)]$$
+The system update function per CPU tick unites isolated transitions:
+$$\vec{A}(t+1) = \bigcup_{i=1}^{n} \delta_i(a_i(t), \Sigma)$$
+Since each element is evaluated independently, **Data Races are mathematically impossible**. The Worst-Case Execution Time (WCET) is strictly bounded: **$T_{tick} = O(n)$**.
+
+### 3. Graph Optimization (Dead Code Elimination)
+The compiler solves the topological routing of the directed graph $G = (V, E)$.
+* **Unreachable States Pruning (BFS):** A state $v \in V$ is compiled only if a path from the start node $v_0$ exists: $\forall v \in V_{compiled}, \exists \text{ path } p: v_0 \leadsto v$.
+* **Dead Edge Stripping:** If an outgoing edge $e_1 = (u, v)$ has an unconditional truth $C(e_1) \equiv \text{True}$, any other edges $e_2$ with lower priority are algorithmically stripped from the generated firmware to save Flash memory.
+
+### 4. Topological Memory (History Block $H^*$)
+To implement David Harel's history pseudo-states, we introduce a context capture function.
+For a macro-state $G \subset S$, the engine defines a memory function $H$:
+$$H: G \to S_{internal}$$
+Upon token exit, the state is saved: $H(G) = a_i(t)$. Upon return via the History block, the transition is evaluated dynamically:
+* $s_{next} = H(G)$ if $H(G) \neq \emptyset$
+* $s_{next} = s_{default}$ if $H(G) = \emptyset$
+
+### 5. Super States & Hierarchy Flattening
+A Super State $G$ is a subset $S_{sub} \subset S$. If a global outgoing transition $E(G, \Sigma) \to s_{target}$ exists, the compiler applies priority preemption to all inner blocks:
+$$\forall s \in S_{sub}, \delta(s, \sigma_{global}) = s_{target}$$
+During translation, this visual hierarchy is mathematically **flattened** into a 1D pointer array, maintaining $O(1)$ dispatch.
+
+### 6. Virtual Routing (Bridge Blocks)
+* **The Problem:** "Spaghetti code" from overlapping visual connections.
+* **Our Solution:** The Bridge Block $B$ acts as a teleportation node. The compiler generates a surjective mapping $\phi: B \to v_{target}$. During translation, the transit edge $(u, B)$ is dynamically replaced with a direct edge:
+$$E_{compiled} = (E_{vis} \setminus \{(u, B)\}) \cup \{(u, v_{target})\}$$
+The Bridge Block is physically erased from the C++ code, leaving a direct pointer.
+
+### 7. Stackless Dynamic Return (Return Blocks)
+* **The Problem:** Standard subroutine calls cause Stack Overflow on weak MCUs.
+* **Our Solution:** The engine acts as a Pushdown Automaton with a fixed stack depth of 1.
+When transitioning from $s_{caller}$ to a subroutine, the return address is saved: $R \leftarrow s_{caller}$. Upon hitting the Return Block ($B_{return}$), the target is resolved via the saved register: $\delta(B_{return}, \sigma) = R$.
+This enables reusable functions with **$O(1)$ RAM overhead**.
+
 
 ## ⚖️ License & Usage Rights
 VisualBuildStateMachine Creator is open-source software distributed under the GNU GPL v3.0 license. Please note the following key licensing specifics:
