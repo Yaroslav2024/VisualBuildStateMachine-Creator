@@ -1,4 +1,3 @@
-<img width="1280" height="720" alt="pc-usb-telemetry-gif-2" src="https://github.com/user-attachments/assets/7aed80fe-1b8a-4421-b027-698a06cbd276" /># ⚙️ VisualBuildStateMachine Creator
 <img width="2048" height="2064" alt="VisualBuildStateMachine Creator icon" src="https://github.com/user-attachments/assets/39e0b768-1548-4bae-a87f-7a51290f32eb" />
 
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
