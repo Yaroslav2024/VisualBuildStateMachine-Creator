@@ -43,6 +43,9 @@ An example of a PC emulator running...
 <img width="1280" height="720" alt="pc-usb-telemetry-gif-2 (1)" src="https://github.com/user-attachments/assets/bf07fc5c-db62-45e7-9f39-0062868a55b2" />
 An example of demonstrating the operation of USB telemetry...
 
+<img width="692" height="388" alt="Wifi Telemetry debug gif" src="https://github.com/user-attachments/assets/d377ac5e-32cf-4840-8d96-3b35743a3b31" />
+An example of a demonstration of Wi-Fi telemetry...
+
 ## 📖 Documentation & Guides
 
 [usb_debugging_guide.md](https://github.com/user-attachments/files/28191282/usb_debugging_guide.md)
